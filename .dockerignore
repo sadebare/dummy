@@ -1,0 +1,20 @@
+# General
+.env*
+.husky/
+Makefile
+push-to-registry.sh
+
+# Node
+node_modules/
+build/
+.node-version
+
+# Git
+.git/
+.github/
+.gitignore
+README.md
+LICENSE
+
+# Infrastructure
+k8s/

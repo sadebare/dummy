@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1 
+kind: Ingress
+metadata:
+  name: demo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: demo.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: react-k8s-sample
+                port:
+                  number: 8080
+  
